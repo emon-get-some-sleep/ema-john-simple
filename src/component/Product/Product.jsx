@@ -1,8 +1,12 @@
 import React from 'react';
 import './Product.css';
-
+import ShoppingCartFillIcon from 'remixicon-react/ShoppingCartFillIcon';
 const Product = (props) => {
-    const {img, name, price, seller, quantity, ratings} = props.product;
+    
+    const {id,img, name, price, seller, quantity, ratings} = props.product;
+
+    const handleAddToCart = props.handleAddToCart;
+    
     return (
         <div className='product'>
             <img src={img} alt="" />
@@ -12,7 +16,7 @@ const Product = (props) => {
                 <p>Manufacturer: {seller}</p>
                 <p>Rating: {ratings} Stars</p>
             </div>
-            <button className='btn-cart'>Add To Cart</button>
+            <button onClick={() => handleAddToCart(props.product)} className='btn-cart'>Add To Cart <ShoppingCartFillIcon style={{color: 'orange'}} /></button>
         </div>
     );
 };
