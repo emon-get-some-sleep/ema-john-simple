@@ -16,7 +16,10 @@ const cartProductsLoader = async() => {
     }
 
     // if you need to send two things 
-    return [products, savedCart];
+    // return [products, savedCart];
+
+    // another option 
+    // return {products, cart: savedCart};
 
     // console.log(products);
     return savedCart;

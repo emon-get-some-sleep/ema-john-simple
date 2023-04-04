@@ -1,0 +1,5 @@
+.review-container{
+    display: grid;
+    margin: 50px auto;
+    gap: 25px;
+}
