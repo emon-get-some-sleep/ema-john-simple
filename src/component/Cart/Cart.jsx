@@ -1,7 +1,8 @@
 import React from 'react';
 import './Cart.css';
+import DeleteBin2FillIcon from 'remixicon-react/DeleteBin2FillIcon';
 
-const Cart = ({cart}) => {
+const Cart = ({cart, handleClearCart}) => {
     // const cart = props.cart;
     // const {cart} = props;
     // console.log(cart);
@@ -25,6 +26,9 @@ const Cart = ({cart}) => {
             <p>Total Shipping : ${totalShipping}</p>
             <p>Tax : ${tax.toFixed(2)}</p>
             <h6>Grand Total: ${grandTotal.toFixed(2)}</h6>
+            <button 
+             onClick={handleClearCart}
+             className='btn-clear-cart'><span>Clear Cart</span> <DeleteBin2FillIcon  /></button>
         </div>
     );
 };
